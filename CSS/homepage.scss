@@ -1,9 +1,6 @@
 @use "../CSS/partial/fonts";
+@use "../CSS/partial/variables";
 @use "../CSS/partial/mixin" as *;
-
-$primary-color: #323232;
-$secondy-color: #afafaf;
-$third-color: #ffffff;
 
 
 *, *::before, *::after {
