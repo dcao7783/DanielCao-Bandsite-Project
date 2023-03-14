@@ -1,1 +1,94 @@
-/*# sourceMappingURL=homepage.css.map */
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../Assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../Assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../Assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../Assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../Assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../Assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "AvenirNextLTPro", Arial, Helvetica, sans-serif;
+  font-size: normal;
+  font-weight: 400;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #323232;
+  gap: 1.5em;
+}
+.navbar-items {
+  padding: 48px;
+}
+.navbar-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5rem;
+}
+.navbar li {
+  list-style: none;
+}
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.hero-container {
+  background-image: url("../Assets/Images/hero-bio.jpg");
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.hero h1 {
+  font-size: 60px;
+  line-height: 68px;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 6rem 3rem;
+}
+
+.articles h2 {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+}
+.articles-quotation__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.articles-quotation__subheader {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+.articles img {
+  width: 60%;
+  height: 580px;
+}/*# sourceMappingURL=homepage.css.map */
