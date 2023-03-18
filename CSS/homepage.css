@@ -186,7 +186,7 @@ body {
   }
 }
 @media (min-width: 1280px) {
-  .articles {
+  .articles-quotation {
     max-width: 1280px;
     margin: auto;
   }
@@ -206,6 +206,12 @@ body {
     padding: 36px 36px 20px;
   }
 }
+@media (min-width: 1280px) {
+  .articles-quotation h2 {
+    max-width: 1280px;
+    margin: auto;
+  }
+}
 .articles-quotation__container {
   display: flex;
   flex-direction: column;
@@ -219,6 +225,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+@media (min-width: 1280px) {
+  .articles-quotation__container {
+    max-width: 1280px;
+    margin: auto;
   }
 }
 .articles-quotation__container #quotation {
@@ -265,6 +277,18 @@ body {
     font-size: 32px;
   }
 }
+@media (min-width: 1280px) {
+  .articles h3 {
+    max-width: 1280px;
+    margin: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .articles-description {
+    max-width: 1280px;
+    margin: auto;
+  }
+}
 .articles-description__container {
   display: flex;
   flex-direction: column;
@@ -277,6 +301,12 @@ body {
     justify-content: space-around;
     align-items: flex-start;
     padding: 0 93px 32px;
+  }
+}
+@media (min-width: 1280px) {
+  .articles-description__container {
+    max-width: 1280px;
+    margin: auto;
   }
 }
 .articles-description__items {
@@ -330,6 +360,12 @@ body {
     padding: 36px 28px 20px;
   }
 }
+@media (min-width: 1280px) {
+  .gallery h2 {
+    max-width: 1280px;
+    margin: auto;
+  }
+}
 .gallery-container {
   display: flex;
   flex-direction: column;
@@ -341,13 +377,27 @@ body {
     justify-content: center;
     align-content: space-evenly;
     flex-wrap: wrap;
-    margin-bottom: 36px;
+    padding-bottom: 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery-container {
+    max-width: 1280px;
+    margin: auto;
   }
 }
 .gallery-items {
   padding: 16px 16px 0;
   width: 100%;
+  position: relative;
   height: auto;
+  -webkit-filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+.gallery-items:hover {
+  transform: scale(1.1);
+  position: relative;
+  -webkit-filter: grayscale(0%);
 }
 @media (min-width: 768px) {
   .gallery-items {
@@ -495,6 +545,12 @@ body {
 @media (min-width: 768px) {
   .footer-bottom {
     padding: 0 36px 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer-bottom {
+    max-width: 1280px;
+    margin: auto;
   }
 }
 .footer-bottom__logo {

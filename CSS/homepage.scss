@@ -171,12 +171,13 @@ body {
         padding-top: 2rem;
     }
     
-    @include desktop {
-        max-width: 1280px;
-        margin: auto;
-    }
 
     &-quotation {
+
+        @include desktop {
+            max-width: 1280px;
+            margin: auto;
+        }
 
         h2 {
             font-size: 32px;
@@ -190,6 +191,11 @@ body {
                 line-height: 44px;
                 font-weight: 700;
                 padding: 36px 36px 20px;
+            }
+
+            @include desktop {
+                max-width: 1280px;
+                margin: auto;
             }
         }
 
@@ -205,6 +211,11 @@ body {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+            }
+
+            @include desktop {
+                max-width: 1280px;
+                margin: auto;
             }
 
 
@@ -256,6 +267,18 @@ body {
             padding: 30px 97px;
             font-size: 32px;
         }
+
+        @include desktop {
+            max-width: 1280px;
+            margin: auto;
+        }
+    }
+
+    &-description {
+        @include desktop {
+            max-width: 1280px;
+            margin: auto;
+        }
     }
 
     &-description__container {
@@ -269,6 +292,11 @@ body {
             justify-content: space-around;
             align-items: flex-start;
             padding: 0 93px 32px;
+        }
+
+        @include desktop {
+            max-width: 1280px;
+            margin: auto;
         }
     }
 
@@ -322,6 +350,10 @@ body {
             font-weight: 700;
             padding: 36px 28px 20px;
         }
+        @include desktop {
+            max-width: 1280px;
+            margin: auto;
+        }
     }
 
     &-container {
@@ -334,14 +366,28 @@ body {
             justify-content: center;
             align-content: space-evenly;
             flex-wrap: wrap;
-            margin-bottom: 36px;
+            padding-bottom: 36px;
+        }
+
+        @include desktop {
+            max-width: 1280px;
+            margin: auto;
         }
     }
 
     &-items {
         padding: 16px 16px 0;
         width: 100%;
+        position: relative;
         height: auto;
+        -webkit-filter: grayscale(100%);
+        transition: all 0.5s ease;
+
+        &:hover {
+            transform: scale(1.1);
+            position: relative;
+            -webkit-filter: grayscale(0%);
+        }
 
         @include tablet {
             width:30%;
@@ -362,7 +408,6 @@ body {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            // width: 90%;
             padding: 56px 36px 36px;
         }
 
@@ -503,6 +548,11 @@ body {
 
         @include tablet {
             padding: 0 36px 36px;
+        }
+
+        @include desktop {
+            max-width: 1280px;
+            margin: auto;
         }
         
         &__logo {
