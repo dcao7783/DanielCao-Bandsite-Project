@@ -391,13 +391,14 @@ body {
   width: 100%;
   position: relative;
   height: auto;
-  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
   transition: all 0.5s ease;
 }
 .gallery-items:hover {
   transform: scale(1.1);
   position: relative;
-  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .gallery-items {
