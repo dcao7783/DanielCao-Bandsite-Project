@@ -435,7 +435,7 @@ body {
   .footer-top {
     max-width: 1280px;
     margin: auto;
-    padding: 56px 36px 36px;
+    padding: 56px 17px 36px;
   }
 }
 .footer-top__navbar {
@@ -530,6 +530,7 @@ body {
   .footer-mid__container {
     max-width: 1280px;
     margin: 0 auto 10px;
+    padding-left: 35px;
   }
 }
 .footer-mid__items {
@@ -588,5 +589,10 @@ body {
 @media (min-width: 768px) {
   .footer-bottom__copyright {
     font-size: 18px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer-bottom__copyright {
+    padding: 0 0 16px;
   }
 }/*# sourceMappingURL=homepage.css.map */

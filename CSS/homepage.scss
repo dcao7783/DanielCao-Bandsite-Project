@@ -426,7 +426,7 @@ body {
         @include desktop {
             max-width: 1280px;
             margin: auto;
-            padding: 56px 36px 36px;
+            padding: 56px 17px 36px;
         }
 
         &__navbar {
@@ -526,6 +526,7 @@ body {
         @include desktop {
             max-width: 1280px;
             margin: 0 auto 10px;
+            padding-left: 35px;
         }
 
     }
@@ -586,6 +587,10 @@ body {
 
             @include tablet {
                 font-size: 18px;
+            }
+
+            @include desktop {
+                padding: 0 0 16px;
             }
         }
     }
