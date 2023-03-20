@@ -1,6 +1,6 @@
-@use "fonts" as *;
-@use "variables" as *;
-@use "mixin" as *;
+@use "./partial/fonts" as *;
+@use "./partial/variables" as *;
+@use "./partial/mixin" as *;
 
 
 *, *::before, *::after {
@@ -160,7 +160,7 @@ body {
             line-height: 68px;
             font-weight: 700;
             color: $third-color;
-            padding: 0 36px;
+            padding: 0 22px;
         }
     }
 }
@@ -211,12 +211,13 @@ body {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                margin-bottom: 20px;
             }
 
             @include desktop {
                 max-width: 1280px;
                 margin: auto;
-                margin-bottom: 100px;
+                margin-bottom: 20px;
             }
 
 
@@ -312,7 +313,7 @@ body {
         padding: 0 16px 16px;
 
         @include tablet {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 27px;
             font-weight: 400;
             color: $primary-color;
@@ -325,8 +326,11 @@ body {
     position: relative;
     padding-bottom: 16px;
 
+
     @include tablet {
         padding: 36px 36px 0;
+        // display: flex;
+        // flex-direction: column;
     }
     
     &__overlay {
@@ -352,11 +356,12 @@ body {
             font-size: 46px;
             line-height: 44px;
             font-weight: 700;
-            padding: 36px 28px 20px;
+            padding: 36px 14px 20px;
         }
         @include desktop {
             max-width: 1280px;
             margin: auto;
+            padding: 36px 32px 20px;
         }
     }
 
@@ -421,6 +426,7 @@ body {
         @include desktop {
             max-width: 1280px;
             margin: auto;
+            padding: 56px 36px 36px;
         }
 
         &__navbar {
@@ -513,12 +519,13 @@ body {
             justify-content: flex-start;
             align-items: center;
             padding-left: 52px;
+            margin-bottom: 10px;
             gap: 60px;
         }
 
         @include desktop {
             max-width: 1280px;
-            margin: auto;
+            margin: 0 auto 10px;
         }
 
     }
