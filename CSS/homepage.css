@@ -419,6 +419,30 @@ body {
   }
 }
 
+.comments__container, .comments__forms--inputs, .comments__forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.comments__forms {
+  flex-direction: row;
+  gap: 1.5em;
+}
+.comments__forms img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 20% 0;
+     object-position: 20% 0;
+  justify-self: flex-start;
+}
+.comments__forms--inputs {
+  gap: 1.5em;
+}
+
 .footer {
   background-color: #323232;
 }

@@ -408,6 +408,35 @@ body {
     }
 }
 
+.comments {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__forms {
+        @extend .comments__container;
+        flex-direction: row;
+        gap: 1.5em;
+
+        img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: 20% 0;
+            justify-self: flex-start;
+        }
+
+        &--inputs {
+            @extend .comments__container;
+            gap: 1.5em;
+        }
+    }
+}
+
 .footer {
     background-color: $primary-color;
 
