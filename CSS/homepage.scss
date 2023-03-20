@@ -329,12 +329,10 @@ body {
 
     @include tablet {
         padding: 36px 36px 0;
-        // display: flex;
-        // flex-direction: column;
     }
     
     &__overlay {
-        content: "";
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
