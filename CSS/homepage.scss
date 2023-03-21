@@ -409,17 +409,41 @@ body {
 }
 
 .comments {
+
+    h2 {
+        font-size: 46px;
+        color: $primary-color;
+        padding: 36px 16px;
+
+        @include tablet {
+            padding: 36px 36px;
+        }
+
+        @include desktop {
+            max-width: 1280px;
+            margin: auto;
+        }
+
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 3rem;
     }
 
     &__forms {
-        @extend .comments__container;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
-        gap: 1.5em;
+        align-items: flex-start;
+        position: relative;
+        width: 80%;
+        margin: auto;
+        gap: 1rem;
 
         img {
             width: 65px;
@@ -427,12 +451,69 @@ body {
             border-radius: 50%;
             object-fit: cover;
             object-position: 20% 0;
-            justify-self: flex-start;
+            margin-top: 20px;
         }
 
         &--inputs {
-            @extend .comments__container;
-            gap: 1.5em;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        &--items {
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+
+            label {
+                font-size: 16px;
+                color: $secondy-color;
+                font-weight: 600;
+            }
+
+            input {
+                padding: 1.5em;
+                width: 36rem;
+                border-radius: 5px;
+                border: 1px solid $secondy-color;
+                position: relative;
+            }
+
+            input::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $gallery-bg-color;
+                opacity: 0.2;
+                z-index: 1;
+            }
+
+            input::placeholder {
+                font-family: $font-stack;
+                font-weight: 400;
+                color: $primary-color;
+                font-size: 18px;
+            }
+
+            #text {
+                padding-bottom: 6rem;
+            }
+        }
+
+        button {
+            font-size: 20px;
+            align-self: flex-end;
+            margin-top: 2rem;
+            padding: 0.8rem 3rem;
+            background-color: $primary-color;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
         }
     }
 }

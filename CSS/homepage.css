@@ -419,15 +419,39 @@ body {
   }
 }
 
-.comments__container, .comments__forms--inputs, .comments__forms {
+.comments h2 {
+  font-size: 46px;
+  color: #323232;
+  padding: 36px 16px;
+}
+@media (min-width: 768px) {
+  .comments h2 {
+    padding: 36px 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .comments h2 {
+    max-width: 1280px;
+    margin: auto;
+  }
+}
+.comments__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 3rem;
 }
 .comments__forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
-  gap: 1.5em;
+  align-items: flex-start;
+  position: relative;
+  width: 80%;
+  margin: auto;
+  gap: 1rem;
 }
 .comments__forms img {
   width: 65px;
@@ -437,10 +461,67 @@ body {
      object-fit: cover;
   -o-object-position: 20% 0;
      object-position: 20% 0;
-  justify-self: flex-start;
+  margin-top: 20px;
 }
 .comments__forms--inputs {
-  gap: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.comments__forms--items {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.comments__forms--items label {
+  font-size: 16px;
+  color: #afafaf;
+  font-weight: 600;
+}
+.comments__forms--items input {
+  padding: 1.5em;
+  width: 36rem;
+  border-radius: 5px;
+  border: 1px solid #afafaf;
+  position: relative;
+}
+.comments__forms--items input::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e1e1e1;
+  opacity: 0.2;
+  z-index: 1;
+}
+.comments__forms--items input::-moz-placeholder {
+  font-family: "AvenirNext LT Pro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #323232;
+  font-size: 18px;
+}
+.comments__forms--items input::placeholder {
+  font-family: "AvenirNext LT Pro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #323232;
+  font-size: 18px;
+}
+.comments__forms--items #text {
+  padding-bottom: 6rem;
+}
+.comments__forms button {
+  font-size: 20px;
+  align-self: flex-end;
+  margin-top: 2rem;
+  padding: 0.8rem 3rem;
+  background-color: #323232;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
 }
 
 .footer {
