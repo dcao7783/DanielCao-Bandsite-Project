@@ -486,17 +486,7 @@ body {
   border-radius: 5px;
   border: 1px solid #afafaf;
   position: relative;
-}
-.comments__forms--items input::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #e1e1e1;
-  opacity: 0.2;
-  z-index: 1;
+  background-color: rgba(225, 225, 225, 0.19);
 }
 .comments__forms--items input::-moz-placeholder {
   font-family: "AvenirNext LT Pro", Arial, Helvetica, sans-serif;
@@ -522,6 +512,38 @@ body {
   border-radius: 5px;
   color: white;
   cursor: pointer;
+}
+.comments-feedbacks__items {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  margin: 2rem auto;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid #afafaf;
+}
+.comments-feedbacks__items--pic {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: rgba(225, 225, 225, 0.79);
+}
+.comments-feedbacks__items--info {
+  width: 576px;
+}
+.comments-feedbacks__items--smalldiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 1rem;
+  padding-top: 0.39rem;
+}
+.comments-feedbacks__items--smalldiv span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #afafaf;
 }
 
 .footer {
