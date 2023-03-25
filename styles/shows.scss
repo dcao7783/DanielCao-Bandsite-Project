@@ -140,9 +140,10 @@ body {
 
             @include tablet {
                 display: flex;
-                flex-direction: row;
-                align-items: center;
+                flex-direction: column;
+                align-items: flex-start;
                 justify-content: center;
+                gap: 1rem;
             }
             
             @include desktop {
@@ -150,13 +151,15 @@ body {
                display: flex;
                flex-direction: row;
                align-items: center;
-               justify-content: center;
+               justify-content: space-between;
                max-width: 1280px;
                margin: auto;
             }
         }
 
     &__heading {
+        width: 60%;
+
         h1 {
                 font-size: 32px;
                 line-height: 32px;
@@ -166,7 +169,8 @@ body {
 
                 @include tablet {
                     font-size: 78px;
-                    line-height: 68px;
+                    line-height: 80px;
+                    word-spacing: 0.5rem;
                     font-weight: 700;
                     color: $third-color;
                     padding: 0 22px;
@@ -188,6 +192,21 @@ body {
             }
         }
     }
+
+    &__soundTrack {
+
+        @include tablet {
+            padding: 0 22px;
+            margin-top: 1rem;
+        }
+
+        &--link{
+        width: 520px;
+        height: 182px;
+        border-radius: 5px;
+        object-fit: cover;
+        }
+    }
 }
 
 .concerts-lists {
@@ -197,7 +216,18 @@ body {
         justify-content: center;
         align-items: flex-start;
         gap: 3rem;
-        padding: 2.5rem 36px;
+        padding: 3.5rem 36px;
+
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 1280px;
+            margin: auto;
+            gap: 8rem;
+            padding-top: 5rem;
+        }
 
         h2 {
             font-size: 47px;
@@ -211,16 +241,20 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        width: 100%;
         gap: 2rem;
+
+        @include desktop {
+            padding-top: 1rem;
+        }
     }
 
     &__items {
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
-        gap: 16rem;
 
         &--span {
             font-size: 16px;
@@ -229,6 +263,14 @@ body {
             text-transform: uppercase;
             color: $secondy-color;
         }
+
+        span {
+            width: 212px;
+
+            @include desktop {
+                width: 193px;
+            }
+        }
     }
 
     &__list {
@@ -236,6 +278,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        width: 100%;
         gap: 5rem;
     }
 
@@ -244,7 +287,46 @@ body {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        gap: 10rem;
+        width: 100%;
+        padding-bottom: 1.7rem;
+        gap: 6rem;
+        border-bottom: 2px solid rgba(225, 225, 225, 0.79);
+
+        &:hover {
+            background-color: rgba(225, 225, 225, 0.19);
+        }
+
+        @include desktop {
+            gap: 5.5rem;
+        }
+
+        &--date {
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: 600;
+            flex: 1;
+
+            @include desktop {
+                width: 152px;
+            }
+        }
+
+        &--text {
+            justify-self: baseline;
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: 400;
+            flex: 1;
+        }
+
+        &--button {
+            padding: 14px 30px;
+            font-size: 20px;
+            font-weight: 400;
+            color: $third-color;
+            background-color: $primary-color;
+            border-radius: 5px;
+        }
     }
 }
 

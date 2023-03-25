@@ -157,9 +157,10 @@ body {
 @media (min-width: 768px) {
   .hero__container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
+    gap: 1rem;
   }
 }
 @media (min-width: 1280px) {
@@ -168,10 +169,13 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 1280px;
     margin: auto;
   }
+}
+.hero__heading {
+  width: 60%;
 }
 .hero__heading h1 {
   font-size: 32px;
@@ -183,7 +187,8 @@ body {
 @media (min-width: 768px) {
   .hero__heading h1 {
     font-size: 78px;
-    line-height: 68px;
+    line-height: 80px;
+    word-spacing: 0.5rem;
     font-weight: 700;
     color: #ffffff;
     padding: 0 22px;
@@ -204,6 +209,19 @@ body {
     padding: 12px 22px;
   }
 }
+@media (min-width: 768px) {
+  .hero__soundTrack {
+    padding: 0 22px;
+    margin-top: 1rem;
+  }
+}
+.hero__soundTrack--link {
+  width: 520px;
+  height: 182px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .concerts-lists__container {
   display: flex;
@@ -211,7 +229,19 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 3rem;
-  padding: 2.5rem 36px;
+  padding: 3.5rem 36px;
+}
+@media (min-width: 1280px) {
+  .concerts-lists__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1280px;
+    margin: auto;
+    gap: 8rem;
+    padding-top: 5rem;
+  }
 }
 .concerts-lists__container h2 {
   font-size: 47px;
@@ -223,15 +253,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  width: 100%;
   gap: 2rem;
+}
+@media (min-width: 1280px) {
+  .concerts-lists__subflex {
+    padding-top: 1rem;
+  }
 }
 .concerts-lists__items {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  gap: 16rem;
 }
 .concerts-lists__items--span {
   font-size: 16px;
@@ -240,11 +275,20 @@ body {
   text-transform: uppercase;
   color: #afafaf;
 }
+.concerts-lists__items span {
+  width: 212px;
+}
+@media (min-width: 1280px) {
+  .concerts-lists__items span {
+    width: 193px;
+  }
+}
 .concerts-lists__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  width: 100%;
   gap: 5rem;
 }
 .concerts-lists__tickets {
@@ -252,7 +296,44 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 10rem;
+  width: 100%;
+  padding-bottom: 1.7rem;
+  gap: 6rem;
+  border-bottom: 2px solid rgba(225, 225, 225, 0.79);
+}
+.concerts-lists__tickets:hover {
+  background-color: rgba(225, 225, 225, 0.19);
+}
+@media (min-width: 1280px) {
+  .concerts-lists__tickets {
+    gap: 5.5rem;
+  }
+}
+.concerts-lists__tickets--date {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 600;
+  flex: 1;
+}
+@media (min-width: 1280px) {
+  .concerts-lists__tickets--date {
+    width: 152px;
+  }
+}
+.concerts-lists__tickets--text {
+  justify-self: baseline;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  flex: 1;
+}
+.concerts-lists__tickets--button {
+  padding: 14px 30px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #323232;
+  border-radius: 5px;
 }
 
 .footer {

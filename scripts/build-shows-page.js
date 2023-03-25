@@ -64,6 +64,11 @@ const array =  [
     listHeaderLocation.innerText = "Location"
     sectionItems.append(listHeaderLocation)
 
+    const listspan = document.createElement ("span")
+    listspan.className = ""
+    listspan.innerText = ""
+    sectionItems.append(listspan)
+
     const sectionList = document.createElement ("div");
     sectionList.className = "concerts-lists__list";
     sectionDiv.append(sectionList);
@@ -98,3 +103,18 @@ for (let i =0; i < array.length; i++) {
     listItems.append(listButton)
 
 }
+
+sectionClick = document.querySelectorAll (".concerts-lists__tickets")
+
+// sectionClick.foreach() {
+
+sectionClick.addEventListener('click', changeColor)
+
+function changeColor (e){
+     e.preventDefault();
+    console.log ('test');
+
+    sectionClick.style.background = "gray"
+}
+// }
+
