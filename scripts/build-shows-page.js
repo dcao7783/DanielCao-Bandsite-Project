@@ -99,22 +99,27 @@ for (let i =0; i < array.length; i++) {
 
     const listButton = document.createElement ("button")
     listButton.className = "concerts-lists__tickets--button"
-    listButton.innerText = "BUT TICKETS"
+    listButton.innerText = "buy tickets"
     listItems.append(listButton)
 
 }
 
-sectionClick = document.querySelectorAll (".concerts-lists__tickets")
 
-// sectionClick.foreach() {
 
-sectionClick.addEventListener('click', changeColor)
+const sectionClick = document.querySelector (".concerts-lists__list")
 
-function changeColor (e){
-     e.preventDefault();
-    console.log ('test');
+const individualClick = document.querySelectorAll (".concerts-lists__tickets")
 
-    sectionClick.style.background = "gray"
+for (let i = 0; i < individualClick.length; i++) {
+    individualClick[i].addEventListener('click', function(e){
+        e.preventDefault();
+       console.log ('test');
+       this.style.backgroundColor = "#e1e1e1"
+})
+
+   individualClick[i].addEventListener('mouseleave', function(e) {
+        e.preventDefault();
+        console.log ('touched');
+        this.style.backgroundColor = "";
+   })
 }
-// }
-

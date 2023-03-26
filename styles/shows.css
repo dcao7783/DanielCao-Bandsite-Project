@@ -239,7 +239,7 @@ body {
     align-items: flex-start;
     max-width: 1280px;
     margin: auto;
-    gap: 8rem;
+    gap: 6.8rem;
     padding-top: 5rem;
   }
 }
@@ -267,6 +267,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1rem;
 }
 .concerts-lists__items--span {
   font-size: 16px;
@@ -297,12 +298,13 @@ body {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  padding-bottom: 1.7rem;
+  padding: 1rem;
   gap: 6rem;
   border-bottom: 2px solid rgba(225, 225, 225, 0.79);
 }
 .concerts-lists__tickets:hover {
-  background-color: rgba(225, 225, 225, 0.19);
+  background-color: #fafafa;
+  cursor: pointer;
 }
 @media (min-width: 1280px) {
   .concerts-lists__tickets {
@@ -331,6 +333,7 @@ body {
   padding: 14px 30px;
   font-size: 20px;
   font-weight: 400;
+  text-transform: uppercase;
   color: #ffffff;
   background-color: #323232;
   border-radius: 5px;
