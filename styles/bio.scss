@@ -411,11 +411,12 @@ body {
 .comments {
 
     h2 {
-        font-size: 46px;
+        font-size: 32px;
         color: $primary-color;
-        padding: 36px 16px;
+        padding: 32px 16px 20px;
 
         @include tablet {
+            font-size: 46px;
             padding: 36px 36px;
         }
 
@@ -432,6 +433,7 @@ body {
         justify-content: center;
         align-items: center;
         padding-bottom: 3rem;
+        width: 100%;
     }
 
     &__forms {
@@ -441,17 +443,38 @@ body {
         flex-direction: row;
         align-items: flex-start;
         position: relative;
+        width: 100%;
+        padding: 0 16px;
+        gap: 1rem;
+
+        @include tablet {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: flex-start;
+        position: relative;
         width: 80%;
         margin: auto;
         gap: 1rem;
+        }
 
         img {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: 20% 0;
+            margin-top: 23.5px;
+
+
+            @include tablet {
             width: 65px;
             height: 65px;
             border-radius: 50%;
             object-fit: cover;
             object-position: 20% 0;
             margin-top: 20px;
+            }
         }
 
         &--inputs {
@@ -468,18 +491,31 @@ body {
             flex-direction: column;
 
             label {
-                font-size: 16px;
+                font-size: 12.5px;
                 color: $secondy-color;
                 font-weight: 600;
+
+                @include tablet {
+                font-size: 16px;
+                }
             }
 
             input {
+                padding: 0.9rem;
+                width: 75vw;
+                border-radius: 5px;
+                border: 1px solid $secondy-color;
+                position: relative;
+                background-color: rgba(225, 225, 225, 0.19);
+
+                @include tablet {
                 padding: 1.5em;
                 width: 36rem;
                 border-radius: 5px;
                 border: 1px solid $secondy-color;
                 position: relative;
                 background-color: rgba(225, 225, 225, 0.19);
+                }
             }
 
             input::placeholder {
@@ -495,6 +531,15 @@ body {
         }
 
         button {
+            font-size: 18px;
+            margin-top: 2rem;
+            padding: 1rem 0;
+            background-color: $primary-color;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+
+            @include tablet {
             font-size: 20px;
             align-self: flex-end;
             margin-top: 2rem;
@@ -503,30 +548,54 @@ body {
             border-radius: 5px;
             color: white;
             cursor: pointer;
+            }
         }
     }
 
     &-feedbacks__items {
         display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        // width: 100%;
+        margin: 2rem 16px;
+        gap: 1rem;
+        padding: 2rem 0 0;
+        border-top: 1px solid $secondy-color;
+
+        @include tablet {
+        display: flex;
         justify-content: center;
         align-items: flex-start;
         position: relative;
-        width: 100%;
+        // width: 100%;
         margin: 2rem auto;
         gap: 1rem;
         padding-top: 2rem;
         border-top: 1px solid $secondy-color;
+        }
 
 
         &--pic {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: rgba(225, 225, 225, 0.79);
+
+            @include tablet {
             width: 65px;
             height: 65px;
             border-radius: 50%;
             background-color: rgba(225, 225, 225, 0.79);
+            }
         }
 
         &--info {
+            width: 75vw;
+
+            @include tablet {
             width: 576px;
+            }
         }
 
         &--smalldiv {

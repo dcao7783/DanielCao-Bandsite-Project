@@ -82,15 +82,27 @@ for (let i =0; i < array.length; i++) {
     listItems.className = "concerts-lists__tickets"
     sectionList.append(listItems)
 
+    const listParaEl = document.createElement ('p');
+    listParaEl.innerHTML = "Date"
+    listItems.append(listParaEl)
+
     const listDate = document.createElement ("h4")
     listDate.className = "concerts-lists__tickets--date"
     listDate.innerText = item.date
     listItems.append(listDate)
 
+    const listParaEl2 = document.createElement ('p');
+    listParaEl2.innerHTML = "Venue"
+    listItems.append(listParaEl2)
+
     const listVenue = document.createElement ("span")
     listVenue.className = "concerts-lists__tickets--text"
     listVenue.innerText = item.venue
     listItems.append(listVenue)
+
+    const listParaEl3 = document.createElement ('p');
+    listParaEl3.innerHTML = "Location"
+    listItems.append(listParaEl3)
 
     const listLocation = document.createElement ("span")
     listLocation.className = "concerts-lists__tickets--text"
