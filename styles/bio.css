@@ -517,7 +517,7 @@ body {
   border-radius: 5px;
   border: 1px solid #afafaf;
   position: relative;
-  background-color: rgba(225, 225, 225, 0.19);
+  background-color: #fafafa;
 }
 @media (min-width: 768px) {
   .comments__forms--items input {
