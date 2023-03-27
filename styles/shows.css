@@ -65,6 +65,11 @@ body {
     padding: 30px 36px;
   }
 }
+@media (min-width: 1280px) {
+  .navbar__logo img {
+    padding: 30px 22px;
+  }
+}
 .navbar__links {
   display: flex;
   justify-content: space-between;
@@ -93,9 +98,6 @@ body {
     flex: none;
   }
 }
-.navbar__links--items:hover {
-  border-bottom: 4px solid #ffffff;
-}
 .navbar__links--items a {
   color: #ffffff;
   text-decoration: none;
@@ -108,6 +110,9 @@ body {
     font-size: 18px;
     font-weight: 400;
   }
+}
+.navbar__links #navbar-shows {
+  border-bottom: 4px solid #ffffff;
 }
 
 .hero {
@@ -148,11 +153,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  margin: 2.5rem 0;
   gap: 1rem;
   padding: 0 16px;
 }
@@ -163,6 +169,7 @@ body {
     align-items: flex-start;
     justify-content: center;
     gap: 1rem;
+    margin: 3.5rem 0 2.5rem;
   }
 }
 @media (min-width: 1280px) {
@@ -179,7 +186,12 @@ body {
   }
 }
 .hero__heading {
-  width: 60%;
+  width: 65%;
+}
+@media (min-width: 768px) {
+  .hero__heading {
+    width: 80%;
+  }
 }
 @media (min-width: 1280px) {
   .hero__heading {
@@ -200,7 +212,7 @@ body {
     line-height: 80px;
     font-weight: 700;
     color: #ffffff;
-    padding: 0 22px;
+    padding: 20px 22px;
   }
 }
 .hero__heading h4 {
@@ -224,7 +236,7 @@ body {
 }
 .hero__soundTrack {
   width: 100%;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 @media (min-width: 768px) {
   .hero__soundTrack {
@@ -246,7 +258,7 @@ body {
 }
 @media (min-width: 768px) {
   .hero__soundTrack--link {
-    width: 520px;
+    width: 530px;
     height: 182px;
     border-radius: 5px;
     -o-object-fit: cover;
@@ -265,7 +277,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 3rem;
-    padding: 3.5rem 36px;
+    padding: 3.5rem 20px 3rem;
   }
 }
 @media (min-width: 1280px) {
@@ -277,7 +289,7 @@ body {
     max-width: 1280px;
     margin: auto;
     gap: 5rem;
-    padding: 5rem 0 0;
+    padding: 5rem 0 3rem;
   }
 }
 .concerts-lists__container h2 {
@@ -291,6 +303,7 @@ body {
     font-size: 47px;
     line-height: 36px;
     font-weight: 700;
+    padding: 0 16px;
     margin: 0;
   }
 }
@@ -306,11 +319,12 @@ body {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    gap: 2rem;
+    gap: 1.65rem;
   }
 }
 @media (min-width: 1280px) {
   .concerts-lists__subflex {
+    gap: 2rem;
     padding-top: 1rem;
   }
 }
@@ -340,7 +354,7 @@ body {
   }
 }
 .concerts-lists__items span {
-  width: 212px;
+  width: 196px;
 }
 @media (min-width: 1280px) {
   .concerts-lists__items span {
@@ -363,7 +377,6 @@ body {
   align-items: flex-start;
   width: 100%;
   padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
   border-bottom: 2px solid rgba(225, 225, 225, 0.79);
 }
 @media (min-width: 768px) {
@@ -436,7 +449,7 @@ body {
 }
 .concerts-lists__tickets--button {
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   width: 100%;
   font-size: 20px;
   font-weight: 400;
@@ -488,7 +501,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 16px;
+    padding: 16px 0;
     gap: 2.5em;
   }
 }
@@ -543,7 +556,7 @@ body {
 @media (min-width: 768px) {
   .footer-top__logo {
     display: flex;
-    padding: 16px;
+    padding: 16px 0;
   }
 }
 .footer-top__logo img {
@@ -560,7 +573,7 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 52px;
+    padding-left: 36px;
     margin-bottom: 10px;
     gap: 60px;
   }
@@ -569,7 +582,7 @@ body {
   .footer-mid__container {
     max-width: 1280px;
     margin: 0 auto 10px;
-    padding-left: 35px;
+    padding-left: 22px;
   }
 }
 .footer-mid__items {
@@ -604,6 +617,7 @@ body {
   .footer-bottom {
     max-width: 1280px;
     margin: auto;
+    padding: 0 22px 36px;
   }
 }
 .footer-bottom__logo {
@@ -628,6 +642,7 @@ body {
 @media (min-width: 768px) {
   .footer-bottom__copyright {
     font-size: 18px;
+    padding: 0 0 16px;
   }
 }
 @media (min-width: 1280px) {

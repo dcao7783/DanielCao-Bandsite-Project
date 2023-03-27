@@ -93,9 +93,6 @@ body {
     flex: none;
   }
 }
-.navbar__links--items:hover {
-  border-bottom: 4px solid #ffffff;
-}
 .navbar__links--items a {
   color: #ffffff;
   text-decoration: none;
@@ -108,6 +105,9 @@ body {
     font-size: 18px;
     font-weight: 400;
   }
+}
+.navbar__links #navbar-bio {
+  border-bottom: 4px solid #ffffff;
 }
 
 .hero {

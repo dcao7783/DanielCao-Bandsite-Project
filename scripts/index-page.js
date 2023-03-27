@@ -44,7 +44,7 @@ function displayComment(e){
         addNewCommentsToPage()
         
         console.log(users);
-    } 
+    }
 
     clearInput()
 }

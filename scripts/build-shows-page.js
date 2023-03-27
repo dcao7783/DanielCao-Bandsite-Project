@@ -118,7 +118,7 @@ for (let i =0; i < array.length; i++) {
 
 
 
-const sectionClick = document.querySelector (".concerts-lists__list")
+// const sectionClick = document.querySelector (".concerts-lists__list")
 
 const individualClick = document.querySelectorAll (".concerts-lists__tickets")
 

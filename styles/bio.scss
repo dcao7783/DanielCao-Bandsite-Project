@@ -74,10 +74,6 @@ body {
                 flex: none;
             }
 
-            &:hover {
-                border-bottom: 4px solid $third-color;
-            }
-
             a {
                 color: $third-color;
                 text-decoration: none;
@@ -91,6 +87,10 @@ body {
                 }
         
             }
+        }
+
+        #navbar-bio {
+            border-bottom: 4px solid $third-color;
         }
     }
 }
