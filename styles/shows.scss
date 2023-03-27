@@ -39,14 +39,16 @@ body {
     }
 
     &__logo img {
-        width: 220px;
+        width: 200px;
         padding: 24px 24px 0;
 
         @include tablet {
+            width: 220px;
             padding: 30px 36px;
         }
 
         @include desktop {
+            width: 220px;
             padding: 30px 22px;
         }
     }
