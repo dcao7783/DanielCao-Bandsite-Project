@@ -575,6 +575,11 @@ body {
         border-top: 1px solid $secondy-color;
         }
 
+        &:nth-child(3){
+            padding-bottom: 2rem;
+            border-bottom: 1px solid $secondy-color;
+        }
+
 
         &--pic {
             width: 46px;

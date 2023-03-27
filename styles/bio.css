@@ -587,6 +587,10 @@ body {
     border-top: 1px solid #afafaf;
   }
 }
+.comments-feedbacks__items:nth-child(3) {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #afafaf;
+}
 .comments-feedbacks__items--pic {
   width: 46px;
   height: 46px;
