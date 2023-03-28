@@ -124,14 +124,15 @@ const individualClick = document.querySelectorAll (".concerts-lists__tickets")
 
 for (let i = 0; i < individualClick.length; i++) {
     individualClick[i].addEventListener('click', function(e){
-        e.preventDefault();
+       e.preventDefault();
+       
        console.log ('test');
-       this.style.backgroundColor = "#e1e1e1"
-})
 
-   individualClick[i].addEventListener('mouseleave', function(e) {
-        e.preventDefault();
-        console.log ('touched');
-        this.style.backgroundColor = "";
-   })
+       individualClick.forEach(row => {
+        row.classList.remove('concerts-lists__tickets--colorChange')
+        })
+
+       individualClick[i].classList.add ('concerts-lists__tickets--colorChange')      
+    })
 }
+

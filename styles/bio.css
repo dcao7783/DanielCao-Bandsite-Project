@@ -57,11 +57,12 @@ body {
   }
 }
 .navbar__logo img {
-  width: 220px;
+  width: 200px;
   padding: 24px 24px 0;
 }
 @media (min-width: 768px) {
   .navbar__logo img {
+    width: 220px;
     padding: 30px 36px;
   }
 }

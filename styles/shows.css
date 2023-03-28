@@ -68,7 +68,7 @@ body {
 }
 @media (min-width: 1280px) {
   .navbar__logo img {
-    width: 220px;
+    width: 190px;
     padding: 30px 22px;
   }
 }
@@ -398,7 +398,10 @@ body {
     gap: 3.5rem;
   }
 }
-.concerts-lists__tickets:hover {
+.concerts-lists__tickets--colorChange {
+  background-color: #afafaf;
+}
+.concerts-lists__tickets:not(.concerts-lists__tickets--colorChange):hover {
   background-color: #fafafa;
   cursor: pointer;
 }

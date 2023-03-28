@@ -48,7 +48,7 @@ body {
         }
 
         @include desktop {
-            width: 220px;
+            width: 190px;
             padding: 30px 22px;
         }
     }
@@ -383,7 +383,12 @@ body {
             gap: 3.5rem;
         }
 
-        &:hover {
+        &--colorChange {
+            background-color: $secondy-color;
+        }
+
+
+        &:not(.concerts-lists__tickets--colorChange):hover {
             background-color: #fafafa;
             cursor: pointer;
         }

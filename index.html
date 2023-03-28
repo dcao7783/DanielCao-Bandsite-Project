@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biography</title>
     <link rel="stylesheet" href="./styles/bio.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/index-page.js" defer></script>
 </head>
 <body>
     <header>
@@ -73,11 +75,11 @@
                     <div class="comments__forms--inputs">
                         <div class="comments__forms--items">
                             <label for="name">NAME</label>
-                            <input type="text" name="NAME" id="name" placeholder="Enter your name">
+                            <input type="text" name="names" id="name" placeholder="Enter your name">
                         </div>
                         <div class="comments__forms--items">
-                            <label for="comment">COMMENT</label>
-                            <input type="text" name="user" id="text" placeholder="Add a new comment">
+                            <label for="text">COMMENT</label>
+                            <input type="text" name="comments" id="text" placeholder="Add a new comment">
                             <button class="comments__btn">COMMENT</button>
                         </div>
                     </div>
@@ -122,6 +124,5 @@
             <div class="footer-bottom__copyright">Copyright The Bees Knees &copy; 2021 All Rights Reserved</div>
         </section>
     </footer>
-    <script src="./scripts/index-page.js"></script>
 </body>
 </html>
