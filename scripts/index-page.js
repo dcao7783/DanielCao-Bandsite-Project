@@ -85,23 +85,27 @@
 const theList = document.querySelector (".comments-feedbacks__container")
 
 
-axios.get("https://project-1-api.herokuapp.com/register")
-    .then((response) => {
-        console.log(response);
-        const apiKey = response.data.api_key;
-        console.log(apiKey);
-    })
-    .catch(error => {
-        console.log(error);
-    })
+// axios.get("https://project-1-api.herokuapp.com/register")
+//     .then((response) => {
+//         console.log(response);
+//         const apiKey = response.data.api_key;
+//         console.log(apiKey);
+//     })
+//     .catch(error => {
+//         console.log(error);
+//     })
+
+const apiKey1 = "57536e20-6798-4537-be67-026393033c7e"
 
 
 let userComments = [];
 
 function getComments() {
-    axios.get("https://project-1-api.herokuapp.com/comments?api_key=apiKey")
+    axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey1}`)
      .then((response) => {
         userComments = response.data;
+        userComments.sort((a, b) => b.timestamp - a.timestamp);
+        console.log(userComments)
         displayComments();
      })
 }
@@ -170,7 +174,7 @@ submitBtn.addEventListener('click', (e) => {
                 comment: commentClick,
             };
 
-            axios.post("https://project-1-api.herokuapp.com/comments?api_key=apiKey", newFeedback)
+            axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey1}`, newFeedback)
                     .then(() => {
                         getComments();
                     });
