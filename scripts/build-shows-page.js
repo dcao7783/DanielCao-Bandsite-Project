@@ -1,36 +1,3 @@
-// const array =  [
-//     {
-//         date: "Mon Sept 06 2021",
-//         venue: "Ronald Lane",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Tue Sept 21 2021",
-//         venue: "Pier 3 East",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Fri Oct 15 2021",
-//         venue: "View Lounge",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Sat Nov 06 2021",
-//         venue: "Hyatt Agency",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Fri Nov 26 2021",
-//         venue: "Moscow Center",
-//         location: "San Francisco, CA",
-//     },
-//     {
-//         date: "Wed Dec 15 2021",
-//         venue: "Press Club",
-//         location: "San Francisco, CA",
-//     }
-// ]
-
     const timeTable = document.querySelector (".concerts-lists")
 
     const sectionContainer = document.createElement ("div");
@@ -84,9 +51,6 @@ function getShowdates() {
     axios.get(`https://project-1-api.herokuapp.com/showdates/?api_key=${apiKey1}`)
          .then((response) => {
             showDates = response.data;
-            // console.log(response.data);
-            // userComments.sort((a, b) => b.timestamp - a.timestamp);
-            // console.log(showDates);
             displayShowdates();
         })
 }
@@ -144,8 +108,6 @@ function displayShowdates () {
             e.preventDefault();
             
             const allListItems = document.querySelectorAll (".concerts-lists__tickets")
-            
-            console.log (allListItems);
      
             allListItems.forEach(row => {
              row.classList.remove('concerts-lists__tickets--colorChange')
@@ -158,31 +120,3 @@ function displayShowdates () {
 
 }
 
-
-
-// const sectionClick = document.querySelector (".concerts-lists__list")
-
-// const individualClick = document.querySelectorAll (".concerts-lists__tickets")
-
-// for (let i = 0; i < individualClick.length; i++) {
-//     individualClick[i].addEventListener('click', function(e){
-//        e.preventDefault();
-       
-//        console.log ('test');
-
-//        individualClick.forEach(row => {
-//         row.classList.remove('concerts-lists__tickets--colorChange')
-//         })
-
-//        individualClick[i].classList.add ('concerts-lists__tickets--colorChange')      
-//     })
-// }
-
-
-// individualClick.forEach(row => {
-//     individualClick.addEventLisenter('click', function(e) {
-//         e.preventDefault();
-//         row.classList.remove('concerts-lists__tickets--colorChange')
-//         row.classList.add('concerts-lists__tickets--colorChange')
-//     })
-// })

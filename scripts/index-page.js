@@ -1,99 +1,5 @@
-// const submitBtn = document.querySelector('.comments__btn')
-// const userName = document.querySelector('#name')
-// const comment = document.querySelector('#text')
-
-// submitBtn.addEventListener('click', displayComment)
-
-// function displayComment(e){
-//     e.preventDefault()
-//     const nameClick = userName.value 
-//     const commentClick = comment.value 
-//     console.log(nameClick, commentClick)
-
-//     if(nameClick && commentClick !==""){
-//         const newFeedback = {
-//             name: nameClick,
-//             timestamp: logComment(),
-//             img: "",
-//             commentText: commentClick,
-//         }
-//         // to push new object into the array
-//         users.unshift(newFeedback);
-//         // to do display comments on the page, may need some loop
-//         addNewCommentsToPage()
-        
-//         console.log(users);
-//     }
-
-//     clearInput()
-// }
-
-// function clearInput(){
-//     userName.value = ''
-//     comment.value = ''
-// }
-
-// function logComment() {
-//     const currentDate = new Date();
-//     const options = {month: "2-digit", day: "2-digit", year: "numeric"};
-//     const timesLog = currentDate.toLocaleDateString(undefined, options);
-
-//     return (timesLog);
-// }
-
-// function addNewCommentsToPage() {
-//     theList.innerHTML = "";
-
-//     for (let i=0; i< users.length; i++) {
-//         const newCommentEl = document.createElement("div");
-//         newCommentEl.className = "comments-feedbacks__items";
-
-//         // img
-//         const newImgEl = document.createElement("div");
-//         newImgEl.classList.add("comments-feedbacks__items--pic");
-//         newCommentEl.append(newImgEl);
-
-//         // content flex container
-//         const newFlexContainer = document.createElement("div");
-//         newFlexContainer.className = "comments-feedbacks__items--info";
-//         newCommentEl.append(newFlexContainer);
-
-//         // creating flexbox inside the flex container
-//         const newSmallDiv = document.createElement("div");
-//         newSmallDiv.className = "comments-feedbacks__items--smalldiv";
-//         newFlexContainer.append(newSmallDiv);
-
-//         // creating contents
-//         const newNameEl = document.createElement("h4");
-//         newNameEl.innerText = users[i].name;
-//         newSmallDiv.append(newNameEl);
-
-//         // creating body contents
-//         const newCommentText = document.createElement("p");
-//         newCommentText.innerText = users[i].commentText;
-//         newFlexContainer.append(newCommentText);
-
-//         // creating timeStamp
-//         const newTimeEl = document.createElement("span");
-//         newTimeEl.innerText = users[i].timestamp;
-//         newSmallDiv.append(newTimeEl);
-
-//         theList.append(newCommentEl);
-//     }
-// }
-
 const theList = document.querySelector (".comments-feedbacks__container")
 
-
-// axios.get("https://project-1-api.herokuapp.com/register")
-//     .then((response) => {
-//         console.log(response);
-//         const apiKey = response.data.api_key;
-//         console.log(apiKey);
-//     })
-//     .catch(error => {
-//         console.log(error);
-//     })
 
 const apiKey1 = "57536e20-6798-4537-be67-026393033c7e"
 
@@ -105,7 +11,6 @@ function getComments() {
      .then((response) => {
         userComments = response.data;
         userComments.sort((a, b) => b.timestamp - a.timestamp);
-        console.log(userComments)
         displayComments();
      })
 }
@@ -166,7 +71,6 @@ submitBtn.addEventListener('click', (e) => {
         e.preventDefault();
         const nameClick = userName.value; 
         const commentClick = userComment.value;
-        console.log(nameClick, commentClick);
     
         if(nameClick && commentClick !==""){
             const newFeedback = {
@@ -178,8 +82,6 @@ submitBtn.addEventListener('click', (e) => {
                     .then(() => {
                         getComments();
                     });
-                console.log("Comment submitted")
-                console.log(userComments)
                 }
     
         clearInput()
